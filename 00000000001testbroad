@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>维基百科镜像 - 网络长城</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Lato', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #202122;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #a2a9b1;
+            padding: 10px 0;
+            margin-bottom: 15px;
+        }
+        .header-content {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 6px;
+            border: 1px solid #a2a9b1;
+            border-right: none;
+            border-radius: 2px 0 0 2px;
+            width: 200px;
+        }
+        .search-bar button {
+            padding: 6px 12px;
+            background-color: #36c;
+            color: white;
+            border: none;
+            border-radius: 0 2px 2px 0;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 3px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: none; /* 移除h3下方的线段 */
+        }
+        h4 {
+            font-size: 16px;
+            border-bottom: none;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 8px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        .toc h2 {
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: none;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        .toc ul ul {
+            padding-left: 20px;
+        }
+        .toc a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 13px;
+        }
+        th, td {
+            border: 1px solid #a2a9b1;
+            padding: 6px;
+        }
+        th {
+            background-color: #eaecf0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .infobox {
+            float: right;
+            margin: 0 0 15px 15px;
+            border: 1px solid #a2a9b1;
+            padding: 8px;
+            background-color: #f8f9fa;
+            width: 270px;
+            font-size: 13px;
+        }
+        .infobox h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .infobox img {
+            display: block;
+            margin: 0 auto;
+            max-width: 250px;
+        }
+        .uninfobox {
+            float: left;
+            margin: 15px 15px 0 0;
+            border: 1px solid #a2a9b1;
+            padding: 8px;
+            background-color: #f8f9fa;
+            width: 270px;
+            font-size: 13px;
+        }
+        .uninfobox img {
+            display: block;
+            margin: 0 auto;
+            max-width: 250px;
+        }
+        .hatnote {
+            font-style: italic;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #eaecf0;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #a2a9b1;
+            padding: 15px 0;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #72777d;
+        }
+        @media (max-width: 768px) {
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 15px 0;
+            }
+            .header-content {
+                flex-direction: column;
+            }
+            .search-bar {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <a href="#" class="logo">维基百科镜像</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>中国网络防火长城（GFW）</h1>
+    <div class="hatnote">
+        此页面由于原维基过长，省略了具体GFW的工作原理的内容。完整版可查看<a href="https://zh.m.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank">原始维基页面</a>，不过由于GFW干扰，你可能无法访问
+    </div>
+
+        <p>防火长城（英語：Great Firewall，GFW），中国国家防火墙，或简称为墙、防火墙等，中国网信办称其为数据跨境安全网关，是该国政府过滤国际互联网出口内容的软硬件系统集合。防火长城不是中國特有的一個專門單位，而是由分散部門的各服务器和路由器等设备，加上相关公司的应用程序构成，其监控所有经过国际网关的通讯，对认为不符合中国官方要求的传输内容，进行干扰、阻断、屏蔽。由於中國網絡審查廣泛，中國大陆內含有「不合適」内容的網站，會受到政府直接的行政干預，故防火长城主要作用在於分析和過濾中國境外網絡的資訊。自本世纪初以来，防火长城由国家计算机网络与信息安全管理中心（CNCERT）运营和维护。</p>
+
+<p>随着防火长城逐渐为人熟知，「墙」一词有时也被用作动词，「被墙」即指网站内容被防火长城所屏蔽。「翻墙」、「挂梯子」、「破网」也被引申为突破网络审查浏览中国大陆境外被屏蔽的网站或使用服务的行为。</p>
+
+        <div class="toc">
+            <h2>目录</h2>
+            <ul>
+                <li><a href="#section1">1. 历史</a>
+                </li>
+                <li><a href="#section2">2. 构架</a>
+                </li>
+                <li><a href="#section3">3. 评价</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="section1">历史</h2>
+<p>中国1994年接入国际互联网，1995年被称为中国的“国际互联网年”。中国政府对互联网的管控始于1996年，总理李鹏签署了国务院令第195号，发布施行《计算机信息网络国际联网管理暂行规定》。其中第六条规定：“计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网”。该规定在后来被广泛用于处罚“翻墙”行为。</p>
+        <div class="infobox">
+            <img src="https://s2.loli.net/2024/08/18/adH7Zkrlo4nzT19.png" alt="十二班">
+            </table>
+        </div>
+
+<p>最早使用Great Firewall一词的是白杰明和桑晔，他们1997年发表的文章《The Great Firewall of China》称这一系统开发开始在1996年，并且当年在金橋信息網和ChinaNet已经有国外新闻网站被屏蔽。</p>
+
+<p>技术手段方面，一开始防火长城仅使用IP封锁，这并不能应对网站时常更换IP的情况。自2002年开始，其能够自动执行针对特定域名的DNS劫持，并能够检测HTTP连接中的特定关键字，使用TCP重置攻击的方法阻止连接。</p>
+
+<p>自2010年以来，HTTPS（加密的HTTP）开始被广泛使用，维基媒体计划也于2015年切换到仅加密连接，而防火长城在很长一段时间内都没有处理加密连接。直到2018年8月，对加密连接中“服务器名称指示”（SNI）信息的检测才出现，而此时正是关于加密服务器名称指示（ESNI）的IETF草案发布刚刚1个月后。另一个，自2020年7月下旬起，ESNI协议也被封锁。</p>
+
+        <h2 id="section2">构架</h2>
+<p>防火长城工作在旁路，而非网关。防火长城主要部署于北京、上海和广州的三个大型互联网交换中心，而非在国际出口，在省级部署的设备较少。根据“GFW技术评论”网站2010年的估计，其硬件配置如下：</p>
+
+<p>* 防火长城（北京）使用曙光4000L机群，Red Hat操作系统。</p>
+<p>* 防火长城实验室（哈工大）使用曙光服务器，Red Hat操作系统。</p>
+<p>* 防火长城（上海）使用Beowulf集群。</p>
+
+<p>另外，防火长城使用的处理器指令集架构是x86-64。</p>
+
+        <h2 id="section3">评价</h2>
+        <p>防火长城对网络内容的审查是否限制和违反了言论自由，一直是受争议的话题，官方說辭也相當籠統。2007年有报告认为，防火长城并非防火墙，而是一种圆形监狱，其审查即使能轻易绕过，也会促使人民自我审查。</p>
+
+<p>美国贸易代表办公室在2016年4月发布的有关贸易环境的年度报告中称，中国对互联网的审查过滤对外国企业是严重的贸易障碍。报告指出，中国对很多境外网站的屏蔽都很武断，有些和社会稳定或国家安全没有关系的网站也被屏蔽。</p>
+
+<p>对此，中国外交部发言人洪磊回应：“我们希望各国尊重其他国家自主选择的互联网发展道路、管理模式、公共政策以及参与国际互联网治理的权利”；《环球时报》为此发表社评，认为美国同样有大量贸易壁垒，并表示“网络防火墙”能够遏制西方意识形态渗透，帮助中国更加强大，其必将得到历史的正面评价。</p>
+
+<p>北京大學和斯坦福大學兩名經濟學家在2018年的研究发现，中國大學生對於獲取未經審查的政治敏感信息漠不關心。他们认为，审查制度十分有效，不仅敏感信息难以获取，民众逐渐也不要求获取它们。</p>
+
+<p>2021年11月，网信办发布的《网络数据安全管理条例（征求意见稿）》写道：数据跨境安全网关是指“阻断访问境外反动网站和有害信息、防止来自境外的网络攻击、管控跨境网络数据传输、防范侦查打击跨境网络犯罪的重要安全基础设施”。</p>
+
+<p>2023年发起“拆墙运动”的异议人士乔鑫鑫认为防火长城是“网络柏林墙”。</p>
+    </div>
+
+    <div class="footer">
+        <p>本页面最后编辑于今年某月某日 (星期几) 不知道:多久（UTC）</p>
+        <p>本站的全部文字在知识共享 署名-相同方式共享 3.0协议之条款下提供，附加条款亦可能应用。</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
